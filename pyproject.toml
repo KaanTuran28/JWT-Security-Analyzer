@@ -1,0 +1,23 @@
+[project]
+name = "jwt-security-analyzer"
+version = "0.1.0"
+description = "Offline JWT security analyzer: alg:none, weak HMAC secrets, jku/x5u key-confusion vectors, expiration and sensitive-claim hygiene."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Kaan Turan" }]
+dependencies = []
+
+[project.scripts]
+jwt-security-analyzer = "jwt_security_analyzer:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["jwt_security_analyzer"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
